@@ -1,0 +1,13 @@
+% Simulation details and contact info
+...
+
+% Setup variables and constants
+...
+
+% Loop
+for <:>
+...
+end
+
+% Visualization
+...
