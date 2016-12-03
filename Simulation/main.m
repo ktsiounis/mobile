@@ -2,7 +2,7 @@
 ...
 
 % Setup variables and constants
-...
+setup();
 
 % Loop
 for <:>
@@ -10,4 +10,4 @@ for <:>
 end
 
 % Visualization
-...
+visualise();
