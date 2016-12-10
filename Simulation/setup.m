@@ -13,9 +13,10 @@ phi_dot_2 = 5;      %force of the motors needed for velocity.Will be calculated 
 %starttime = 0;			% Times starts at 0 seconds
 startTime = 0;			% Time starts at 0 seconds
 endTime = 20;			% Time ends at 20 seconds
-N = length(startTime:endTime)	% Total timestamps vector
-dt = 0.001;              	% Time derivative
-		
+dt = 0.01;
+times = startTime:dt:endTime	% Total timestamps vector
+N = length(times);
+
 
 % *_out vectors initialized for saving all the simulation
 % data for the visualization.
