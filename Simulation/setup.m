@@ -11,8 +11,10 @@ phi_dot_2 = 5;      %force of the motors needed for velocity.Will be calculated 
 
 % Simulation variables and contstants
 %starttime = 0;			% Times starts at 0 seconds
-MAX_ITER = 50;			% Time will end at 20 seconds,max iterations          
-DT = 0.05;              % Time derivative
+startTime = 0;			% Time starts at 0 seconds
+endTime = 20;			% Time ends at 20 seconds
+N = length(startTime:endTime)	% Total timestamps vector
+dt = 0.001;              	% Time derivative
 		
 
 % *_out vectors initialized for saving all the simulation
