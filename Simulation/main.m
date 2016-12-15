@@ -8,8 +8,8 @@ setup();
 
 % Loop
 for i = 1:N
-v(1) = (r*(sum(F_dot)/2))*cos(theta(1));
-v(2) = (r*(sum(F_dot)/2))*sin(theta(2));
+v(1) = (rad*(sum(F_dot)/2))*cos(theta(1));
+v(2) = (rad*(sum(F_dot)/2))*sin(theta(2));
 omega = r*(F_dot(2)-F_dot(1)/d);
 x = x + v*dt;
 theta = theta + omega*dt;
