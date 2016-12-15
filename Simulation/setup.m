@@ -2,7 +2,7 @@
 
 %Mobile robot variables and constants
 m = 1;				% Mass of the mobile robot (kg)
-g = 9.17			% Gravity constant
+g = 9.17;			% Gravity constant
 rad = 0.5;          % size of the wheel
 d = 2;              % distance between the wheels
 F_dot = [5; 5];		%force of the motors needed for velocity.Will be calculated later
@@ -13,7 +13,7 @@ F_dot = [5; 5];		%force of the motors needed for velocity.Will be calculated lat
 startTime = 0;			% Time starts at 0 seconds
 endTime = 20;			% Time ends at 20 seconds
 dt = 0.01;
-times = startTime:dt:endTime	% Total timestamps vector
+times = startTime:dt:endTime;	% Total timestamps vector
 N = length(times);
 
 
@@ -29,5 +29,5 @@ theta_out = zeros(1,N);      % Starting direction
 v = [0; 0];					
 a = [0; 0];
 x = [0; 0];
-omega = [0];
-theta = [0];
+omega = 0;
+theta = 0;
