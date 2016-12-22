@@ -6,7 +6,7 @@ g = 9.17;			% Gravity constant
 rad = 0.5;          % size of the wheel
 d = 2;              % distance between the wheels
 F_dot = [5; 5];		%force of the motors needed for velocity.Will be calculated later
-
+kf=1;
 
 % Simulation variables and contstants
 %starttime = 0;			% Times starts at 0 seconds
@@ -31,3 +31,5 @@ a = [0; 0];
 x = [0; 0];
 omega = 0;
 theta = 0;
+
+x_des = [10 0];

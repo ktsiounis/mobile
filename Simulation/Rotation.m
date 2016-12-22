@@ -1,7 +1,6 @@
-%rotation matrix for mobile robot.Rotated on Z axis
-
 function R = rotation(theta)
-	R = [cos(theta)	... 0;
-		 sin(theta) ... 0;
-		];
+	% Define an R rotation matrix in Z axis
+    R = [cos(theta), -sin(theta), 0;
+        sin(theta), cos(theta), 0;
+        0, 0, 1]; 
 end

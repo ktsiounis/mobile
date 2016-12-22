@@ -14,10 +14,13 @@ setup();
 
 % Loop
 for i = 1:N
+    % The desired force is calculated by the error between the desired and
+    % the current position of the mobile robot.
+    F_des = kf*(x_des' - x);
     
     % Calculate the velocity
-    v(1) = (rad * (sum(F_dot) / 2)) * cos(theta);   % Valocity at X axis
-    v(2) = (rad * (sum(F_dot) / 2)) * sin(theta);   % Velocity at Y axis
+    v(1) = (rad * (sum(F_des) / 2)) * cos(theta);   % Valocity at X axis
+    v(2) = (rad * (sum(F_des) / 2)) * sin(theta);   % Velocity at Y axis
     
     % Calculate the position
     x = x + v*dt;
@@ -40,4 +43,14 @@ for i = 1:N
 end
 
 % Visualize here
-plot(times, x_out);
+figure();
+xlabel('x (pixels)')
+ylabel('y (pixels)')
+title('Mobile Robot');
+grid on;
+
+for i = 1:N
+    hold on
+    plot(x_out(:, i));
+    hold off
+end
